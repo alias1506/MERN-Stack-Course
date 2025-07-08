@@ -1,0 +1,82 @@
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.header-image {
+  width: 150px;
+  height: auto;
+}
+.heading {
+  text-align: center;
+}
+.about-container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.paragraph {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+.subheading {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.about-image {
+  width: 100%;
+  height: auto;
+}
+.paragraph-container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: justify;
+  padding-right: 20px;
+}
+.about-image-container {
+  width: 50%;
+  margin: 0 auto;
+}
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.gallery-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.student-table-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.student-table-container h2 {
+  margin-bottom: 20px;
+}
+.student-table {
+  width: 100%;
+  border: 1px solid #000;
+  margin-top: 20px;
+}
+.student-table tr {
+  text-align: center;
+}
+.student-table th {
+  padding: 10px;
+  border: 1px solid #000;
+}
+.student-table tr td {
+  border: 1px solid #000;
+  padding: 10px;
+}
