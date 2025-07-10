@@ -77,6 +77,8 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   padding: 30px;
+  position: relative;
+  bottom: 100px;
 }
 
 .photos {
