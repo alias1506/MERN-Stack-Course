@@ -82,7 +82,8 @@ html {
 .students-pic {
   width: 50%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: auto auto auto auto;
+  /* grid-template-columns: repeat(4, 1fr); */
   gap: 15px;
 }
 .students-pic img {
