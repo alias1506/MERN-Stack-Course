@@ -207,6 +207,7 @@ html {
 .section9-container .course-cards .cards,
 .section10-container .course-cards .cards,
 .section11-container .course-cards .cards {
+  position: relative;
   width: 100%;
   height: auto;
   background-color: #fff;
@@ -313,6 +314,7 @@ html {
 }
 .card-body {
   padding: 25px;
+  width: 100%;
 }
 .card-body p {
   display: flex;
@@ -339,7 +341,6 @@ html {
   align-items: center;
   gap: 5px;
 }
-
 .stars img {
   width: 15px;
   height: 15px;
@@ -602,4 +603,55 @@ html {
   text-align: center;
   border: none;
   cursor: pointer;
+}
+.cards-hover {
+  background-color: #000000ee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  inset: 0;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+.section6 .cards:hover .cards-hover {
+  opacity: 1;
+}
+.cards-hover .card-body span {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #dddddd;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cards-hover .card-body p {
+  width: 100%;
+  color: #dddddd;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.cards-hover .card-body ul {
+  align-items: center;
+  color: #dddddd;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: normal;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+.cards-hover .card-body button {
+  border: 1px solid #fff;
+  background: transparent;
+  color: white;
+  width: 100%;
+  padding: 13px;
+  margin-top: 5px;
 }
