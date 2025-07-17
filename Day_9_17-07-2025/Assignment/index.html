@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="first">
+        <div class="top">
+          <h1>Select a photo</h1>
+          <div class="pictures">
+            <div class="pic">
+              <img
+                src="assets/images/emoji1.png"
+                alt=""
+                onclick="changeEmoji(this)"
+              />
+            </div>
+            <div class="pic">
+              <img
+                src="assets/images/emoji2.png"
+                alt=""
+                onclick="changeEmoji(this)"
+              />
+            </div>
+            <div class="pic">
+              <img
+                src="assets/images/emoji3.png"
+                alt=""
+                onclick="changeEmoji(this)"
+              />
+            </div>
+            <div class="pic">
+              <img
+                src="assets/images/emoji4.png"
+                alt=""
+                onclick="changeEmoji(this)"
+              />
+            </div>
+            <div class="pic">
+              <img
+                src="assets/images/emoji5.png"
+                alt=""
+                onclick="changeEmoji(this)"
+              />
+            </div>
+            <div class="pic">
+              <img
+                src="assets/images/emoji6.png"
+                alt=""
+                onclick="changeEmoji(this)"
+              />
+            </div>
+          </div>
+          <button id="reset" onclick="reset('emoji')">Reset</button>
+        </div>
+        <div class="bottom">
+          <h1>Select a background</h1>
+          <div class="backgrounds">
+            <div class="back-pic">
+              <img
+                src="assets/images/background1.jpg"
+                alt=""
+                onclick="changeBackground(this)"
+              />
+            </div>
+            <div class="back-pic">
+              <img
+                src="assets/images/background2.jpg"
+                alt=""
+                onclick="changeBackground(this)"
+              />
+            </div>
+            <div class="back-pic">
+              <img
+                src="assets/images/background3.jpg"
+                alt=""
+                onclick="changeBackground(this)"
+              />
+            </div>
+            <div class="back-pic">
+              <img
+                src="assets/images/background4.jpg"
+                alt=""
+                onclick="changeBackground(this)"
+              />
+            </div>
+          </div>
+          <button id="reset" onclick="reset('background')">Reset</button>
+        </div>
+      </div>
+
+      <div class="second">
+        <div id="background"></div>
+        <div id="emoji"></div>
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

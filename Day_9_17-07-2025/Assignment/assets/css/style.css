@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.first {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.second {
+  width: 70%;
+  height: 100%;
+  border-radius: 15px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.15),
+    0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.top,
+.bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.15),
+    0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.top h1,
+.bottom h1 {
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.pictures,
+.backgrounds {
+  display: grid;
+  gap: 30px;
+  margin: 20px;
+}
+
+.pictures {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.backgrounds {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.pic img,
+.back-pic img {
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05),
+    -4px -4px 10px rgba(255, 255, 255, 0.6);
+}
+
+.pic img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.back-pic img {
+  width: auto;
+  height: 130px;
+  object-fit: cover;
+}
+
+.pic img:hover,
+.back-pic img:hover {
+  transform: scale(1.05) perspective(1000px) rotateX(2deg) rotateY(2deg);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1),
+    -6px -6px 20px rgba(255, 255, 255, 0.7);
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#emoji img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+#reset {
+  padding: 10px;
+  background-color: #ccc;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 5px;
+}
