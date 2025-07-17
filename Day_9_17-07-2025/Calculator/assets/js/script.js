@@ -14,7 +14,7 @@ function calcfunc(action) {
       let newVal = val.slice(0, -1);
       val = newVal;
       input.value = val;
-      if (!input.value.includes(".")) {
+      if (!getLastNumber(input.value).includes(".")) {
         decimal.disabled = false;
       }
       break;
@@ -35,7 +35,8 @@ function calcfunc(action) {
 
     case ".":
       if (!getLastNumber(input.value).includes(".")) {
-        input.value += action;
+        input.value += ".";
+        decimal.disabled = true;
       }
       break;
 
@@ -44,17 +45,23 @@ function calcfunc(action) {
     case "*":
     case "/":
       input.value += action;
-      decimal.disabled = false;
+      if (!getLastNumber(input.value).includes(".")) {
+        decimal.disabled = false;
+      }
       break;
 
     case "%":
       input.value = input.value / 100;
-      decimal.disabled = false;
+      if (!getLastNumber(input.value).includes(".")) {
+        decimal.disabled = false;
+      }
       break;
 
     case "=":
       input.value = eval(input.value);
-      decimal.disabled = false;
+      if (!getLastNumber(input.value).includes(".")) {
+        decimal.disabled = false;
+      }
       break;
 
     default:
