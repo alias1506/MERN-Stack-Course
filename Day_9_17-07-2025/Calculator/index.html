@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <input type="text" name="screen" id="screen" value="" readonly />
+        <div class="buttons">
+          <button class="btn" onclick="calcfunc('ac')">AC</button>
+          <button class="btn" onclick="calcfunc('%')">%</button>
+          <button class="btn" onclick="calcfunc('c')">C</button>
+          <button class="btn" onclick="calcfunc('/')">/</button>
+          <button class="btn" onclick="calcfunc('7')">7</button>
+          <button class="btn" onclick="calcfunc('8')">8</button>
+          <button class="btn" onclick="calcfunc('9')">9</button>
+          <button class="btn" onclick="calcfunc('*')">*</button>
+          <button class="btn" onclick="calcfunc('4')">4</button>
+          <button class="btn" onclick="calcfunc('5')">5</button>
+          <button class="btn" onclick="calcfunc('6')">6</button>
+          <button class="btn" onclick="calcfunc('-')">-</button>
+          <button class="btn" onclick="calcfunc('1')">1</button>
+          <button class="btn" onclick="calcfunc('2')">2</button>
+          <button class="btn" onclick="calcfunc('3')">3</button>
+          <button class="btn" onclick="calcfunc('+')">+</button>
+          <button class="btn" onclick="calcfunc('00')">00</button>
+          <button class="btn" onclick="calcfunc('0')">0</button>
+          <button class="btn" id="decimal" onclick="calcfunc('.')">.</button>
+          <button class="btn btn-equal" onclick="calcfunc('=')">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
