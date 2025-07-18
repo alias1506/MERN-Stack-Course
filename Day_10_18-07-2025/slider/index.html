@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="slider">
+        <div class="image-container">
+          <img src="assets/images/banner1.jpg" alt="Banner 1" />
+          <img src="assets/images/banner2.jpg" alt="Banner 2" />
+          <img src="assets/images/banner3.jpg" alt="Banner 3" />
+          <img src="assets/images/banner4.jpg" alt="Banner 4" />
+        </div>
+        <div class="button-container">
+          <button class="prev" onclick="Slide(-1)">
+            <img src="assets/images/left-arrow.png" alt="Previous" />
+          </button>
+          <button class="next" onclick="Slide(1)">
+            <img src="assets/images/right-arrow.png" alt="Next" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
