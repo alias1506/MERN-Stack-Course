@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #d3d3d3;
+  color: #000000;
+  font-family: "Nunito Sans", sans-serif;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+}
+.container .title {
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.input-design {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.input-design label {
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+}
+.input-design .input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+}
+.input:focus {
+  outline: none;
+}
+.tags {
+  text-align: left;
+  width: 100%;
+}
+.tags p {
+  text-align: left;
+}
+#generate {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-top: 20px;
+}
+#generate:hover {
+  background-color: #000;
+  color: #ffffff;
+}
+#output {
+  width: 80%;
+  height: 400px;
+  overflow-y: scroll;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+  margin-top: 20px;
+  text-align: justify;
+  padding: 20px;
+}
+.checkbox-design {
+  margin-bottom: 10px;
+}
+.checkbox-design select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.checkbox-design select:focus {
+  outline: none;
+}
+.checkbox-design select option {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+#reset,
+#copy-txt {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-top: 20px;
+}
+#reset:hover,
+#copy-txt:hover {
+  background-color: #000;
+  color: #ffffff;
+}

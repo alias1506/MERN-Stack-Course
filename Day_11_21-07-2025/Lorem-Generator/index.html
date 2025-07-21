@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorem Generator</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <h1 class="title">Lorem Generator</h1>
+
+        <div class="input-design">
+          <label for="paragraphs">Number of paragraphs:</label>
+          <input
+            class="input"
+            type="number"
+            id="paragraphs"
+            value="1"
+            placeholder="Number of paragraphs"
+          />
+        </div>
+
+        <div class="input-design">
+          <label for="words">Words per paragraph:</label>
+          <input
+            class="input"
+            type="number"
+            id="words"
+            placeholder="Number of words"
+          />
+        </div>
+
+        <div class="tags">
+          <p>Select HTML tag:</p>
+        </div>
+
+        <div class="checkbox-design">
+          <select name="tags" id="tags">
+            <option value="h1">h1</option>
+            <option value="h2">h2</option>
+            <option value="h3">h3</option>
+            <option value="h4">h4</option>
+            <option value="h5">h5</option>
+            <option value="h6">h6</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="includeHTML">Include HTML:</label>
+          <input type="checkbox" id="includeHTML" checked />
+        </div>
+
+        <div class="button-design">
+          <button id="generate">Generate</button>
+        </div>
+      </div>
+
+      <div id="output"></div>
+      <div>
+        <button id="reset">Reset</button>
+        <button id="copy-txt">Copy To Clipboard</button>
+      </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
