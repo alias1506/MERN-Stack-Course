@@ -1,0 +1,28 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.div-cards {
+  display: grid;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.card1 {
+  width: 300px;
+  height: 200px;
+  background-color: #7cd6f9;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(124, 214, 249, 0.2);
+}
