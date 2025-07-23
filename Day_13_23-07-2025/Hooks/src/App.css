@@ -1,0 +1,42 @@
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.app-container .message {
+  margin-top: 10px;
+  color: red;
+  font-size: 16px;
+}
+.timer {
+  margin-top: 30px;
+}
+.count,
+.stopwatch {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(75, 165, 75);
+}
+.count-container,
+.stopwatch-container {
+  margin-top: 10px;
+  width: 100%;
+}
+.value {
+  color: rgb(75, 165, 75);
+}
+.stopwatch-top {
+  margin-top: 30px;
+}
+.timer h1 {
+  text-align: center;
+}
