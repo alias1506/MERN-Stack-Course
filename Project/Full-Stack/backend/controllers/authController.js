@@ -15,10 +15,9 @@ export const registerUser = async (req, res) => {
     const token = jwt.sign(
       { id: user._id, role: user.role },
       process.env.JWT_SECRET,
-      {
-        expiresIn: "1h",
-      }
+      { expiresIn: "1h" }
     );
+
     res.status(201).json({ token });
   } catch (error) {
     res.status(500).json({ message: "Server error", error: error.message });
@@ -32,14 +31,12 @@ export const loginUser = async (req, res) => {
     if (!user || !(await user.matchPassword(password))) {
       return res.status(401).json({ message: "Invalid credentials" });
     }
+
     const token = jwt.sign(
       { id: user._id, role: user.role },
       process.env.JWT_SECRET,
-      {
-        expiresIn: "1h",
-      }
+      { expiresIn: "1h" }
     );
-    console.log(jwt.decode(token));
 
     res.status(200).json({ token });
   } catch (error) {
@@ -52,10 +49,11 @@ export const getAllUsers = async (req, res) => {
     if (req.user.role !== "job-poster") {
       return res.status(403).json({ message: "Unauthorized" });
     }
+
     const users = await User.find().select("-password");
     res.status(200).json({ users });
   } catch (error) {
-    res.status(500).json({ message: "server error", error: error.message });
+    res.status(500).json({ message: "Server error", error: error.message });
   }
 };
 
@@ -65,26 +63,22 @@ export const getUserById = async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
+
     res.status(200).json({ user });
   } catch (error) {
-    res.status(500).json({ message: "server error", error: error.message });
+    res.status(500).json({ message: "Server error", error: error.message });
   }
 };
 
 export const updateUserProfile = async (req, res) => {
   try {
-    const userId = req.user.id; // from JWT middleware
+    const userId = req.user.id;
     const user = await User.findById(userId);
 
-    if (!user) return res.status(404).json({ message: "User not found" });
-
-    if (user.role !== "job-seeker") {
-      return res
-        .status(403)
-        .json({ message: "Only job seekers can update profile info" });
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
     }
 
-    // Allow updating these fields only
     const { phone, location, education, experience, skills } = req.body;
 
     user.phone = phone || user.phone;
@@ -109,8 +103,8 @@ export const updateUserProfile = async (req, res) => {
         role: updatedUser.role,
       },
     });
-  } catch (err) {
-    res.status(500).json({ message: "Server error", error: err.message });
+  } catch (error) {
+    res.status(500).json({ message: "Server error", error: error.message });
   }
 };
 
