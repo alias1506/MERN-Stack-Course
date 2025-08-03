@@ -19,6 +19,7 @@ export default function Home() {
         setUserId(decoded.id || decoded._id);
       } catch (err) {
         console.error("Invalid token:", err.message);
+        localStorage.removeItem("token");
       }
     }
   }, []);
@@ -48,7 +49,7 @@ export default function Home() {
         user.skills.length > 0;
 
       if (isProfileUpdated) {
-        alert("✅ Profile is updated.");
+        navigate("/my-job");
       } else {
         alert("⚠️ Please update your profile before exploring jobs.");
         navigate("/profile");
@@ -71,6 +72,7 @@ export default function Home() {
           job seeker or a job poster, our platform connects talent with
           opportunity.
         </p>
+
         {role === "job-seeker" && (
           <div className="mt-6">
             <button
