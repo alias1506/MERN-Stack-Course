@@ -36,9 +36,16 @@ export default function Navbar() {
           </>
         )}
 
-        <Link to="/profile" className="hover:underline">
-          Profile
-        </Link>
+        {role === "job-seeker" && (
+          <>
+            <Link to="/profile" className="hover:underline">
+              Profile
+            </Link>
+            <Link to="/applied" className="hover:underline">
+              Applied Jobs
+            </Link>
+          </>
+        )}
 
         <button
           onClick={() => {

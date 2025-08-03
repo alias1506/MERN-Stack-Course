@@ -9,6 +9,7 @@ import Profile from "./pages/Profile.jsx";
 import CreateJob from "./pages/CreateJob.jsx";
 import MyJobs from "./pages/MyJobs.jsx";
 import EditJob from "./pages/EditJob.jsx";
+import Applied from "./pages/AppliedJobs.jsx";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/my-job" element={<MyJobs />} />
         <Route path="/edit-job/:id" element={<EditJob />} />
+        <Route path="/applied" element={<Applied />} />
       </Routes>
     </BrowserRouter>
   );
