@@ -1,7 +1,5 @@
-// controllers/jobController.js
 import Job from "../models/Job.js";
 
-// POST /api/jobs
 export const createJob = async (req, res) => {
   const {
     jobTitle,
@@ -12,10 +10,9 @@ export const createJob = async (req, res) => {
     salaryRange,
     jobType,
   } = req.body;
-  const userId = req.user.id; // From auth middleware
+  const userId = req.user.id; 
   const userRole = req.user.role;
 
-  // Reject if not a job-poster
   if (userRole !== "job-poster") {
     return res.status(403).json({ message: "Only job posters can post jobs" });
   }

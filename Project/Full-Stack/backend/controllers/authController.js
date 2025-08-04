@@ -1,7 +1,6 @@
 import User from "../models/User.js";
 import jwt from "jsonwebtoken";
 
-// Register a new user
 export const registerUser = async (req, res) => {
   const { firstName, lastName, email, password, role } = req.body;
   try {
@@ -25,7 +24,6 @@ export const registerUser = async (req, res) => {
   }
 };
 
-// Login user
 export const loginUser = async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -46,7 +44,6 @@ export const loginUser = async (req, res) => {
   }
 };
 
-// Get all users (only for job-posters)
 export const getAllUsers = async (req, res) => {
   try {
     if (req.user.role !== "job-poster") {
@@ -60,7 +57,6 @@ export const getAllUsers = async (req, res) => {
   }
 };
 
-// Get user by ID
 export const getUserById = async (req, res) => {
   try {
     const user = await User.findById(req.params.id).select("-password");
@@ -74,12 +70,10 @@ export const getUserById = async (req, res) => {
   }
 };
 
-// Update user profile (only job-seekers allowed)
 export const updateUserProfile = async (req, res) => {
   try {
     const userId = req.user.id;
 
-    // Restrict access to job-seeker role
     if (req.user.role !== "job-seeker") {
       return res
         .status(403)
@@ -120,7 +114,6 @@ export const updateUserProfile = async (req, res) => {
   }
 };
 
-// Logout user (for completeness)
 export const logoutUser = (req, res) => {
   res.status(200).json({ message: "Logout successful" });
 };
